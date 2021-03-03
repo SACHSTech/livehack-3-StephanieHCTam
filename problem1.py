@@ -9,26 +9,27 @@ Created:  03/03/2021
 ------------------------------------------------------------------------------
 """
 
-print("****** Tournament Tracker ******")
+print("****** Welcome to the Tournament Tracker ******")
+print("")
 
 # ask user for their team results
 print("Enter the wins and losses for your team: ")
 
-# set total variable
-total = 0
+# set win variable
+wins = 0
 
-# for loop
+# ask for user input from 6 games and count the number of wins 
 for i in range(6):
   result = input("Game " + str(i + 1) + " (W/L): ")
   if result == 'W':
-    total += 1
+    wins += 1
 
-# output team placement
-if total == 5 or total == 6:
+# check conditions and output results
+if wins == 5 or wins == 6:
   print("Your team is in Group 1.")
-if total == 3 or total == 4:
+elif wins == 3 or wins == 4:
   print("Your team is in Group 2.")
-if total == 1 or total == 2:
+elif wins == 1 or wins == 2:
   print("Your team is in Group 3.")
-if total == 0:
+else:
   print("Your team is eliminated from the tournament.")
